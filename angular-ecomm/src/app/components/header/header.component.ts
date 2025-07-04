@@ -1,24 +1,21 @@
-import { Component, signal } from '@angular/core';
+import { Component, inject, signal, computed } from '@angular/core';
 import { PrimaryButtonComponent } from "../primary-button/primary-button.component";
+import { CartService } from '../../../services/cart.service';
 
 @Component({
   selector: 'app-header',
   imports: [PrimaryButtonComponent],
   template: `
-    <div class="bg-slate-100 px-3 py-3 mt-3 shadow-md rounded-lg flex justify-between items-center items">
+    <div class="bg-slate-100 px-3 py-3 shadow-md rounded-lg mt-0 flex justify-between items-center items">
       <span class="text-xl font-bold">My Store</span>
-      <app-primary-button [label]="Cart()" (btnClicked)="buttonClicked()"></app-primary-button>
+      <app-primary-button label="{{cartLabel()}}"></app-primary-button> 
     </div>
   `,
   styles: `
   `
 })
 export class HeaderComponent {
+  cartService = inject(CartService);
 
-  Cart = signal('Add to Cart');
-  
-  buttonClicked() {
-    alert('Button was clicked!');
-  };
-
+  cartLabel = computed(() => `Cart (${this.cartService.cart().length})`);
 }
