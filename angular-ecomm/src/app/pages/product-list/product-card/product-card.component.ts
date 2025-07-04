@@ -17,7 +17,7 @@ import { CartService } from '../../../../services/cart.service';
       <div class="flex flex-col mt-2">
         <span class="text-md font-bold">{{ product().title }}</span>
         <span class="text-sm"> {{ '$' + product().price }}</span>
-        <app-primary-button class="mt-1" label = "Add to Cart" (btnClicked)="cartService.addToCart(product())" ></app-primary-button>
+        <app-primary-button class="mt-1" label = "Add to Cart" (btnClicked) = "cartService.addToCart(product())" ></app-primary-button>
       </div>
 
       <span
