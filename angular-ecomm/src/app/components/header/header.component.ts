@@ -5,7 +5,7 @@ import { PrimaryButtonComponent } from "../primary-button/primary-button.compone
   selector: 'app-header',
   imports: [PrimaryButtonComponent],
   template: `
-    <div class="bg-slate-100 px-3 py-3 shadow-md rounded-lg flex justify-between items-center">
+    <div class="bg-slate-100 px-3 py-3 mt-3 shadow-md rounded-lg flex justify-between items-center items">
       <span class="text-xl font-bold">My Store</span>
       <app-primary-button [label]="Cart()" (btnClicked)="buttonClicked()"></app-primary-button>
     </div>
