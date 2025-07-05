@@ -20,7 +20,7 @@ import { RemoveButtonComponent } from "../../remove-button/remove-button.compone
             </div>
             <div class="flex flex-col mt-2">
               <span class="text-md font-bold">{{ cart.title }}</span>
-              <span class="text-sm"> {{ '$' + cart.price }}</span>
+              <span class="text-sm">{{ '$' + cart.price.toFixed(2) }}</span>
             </div>
           </div>
           <div class="mt-2 ml-auto">
@@ -32,7 +32,7 @@ import { RemoveButtonComponent } from "../../remove-button/remove-button.compone
       <div class="bg-white shadow-lg border rounded-xl p-6 flex flex-col gap-4 mt-4">
         <div class="flex justify-between items-center">
           <span class="text-xl">Total Cost:</span>
-          <span class="text-xl font-semibold">{{ '$' + totalPrice() }}</span>
+          <span class="text-xl font-semibold">{{ '$' + totalPrice().toFixed(2) }}</span>
         </div>
         <button class="bg-blue-500 text-white px-4 py-2 rounded-xl shadow-md hover:opacity-80 w-full mt-2">
           <span class="text-md">Proceed to Checkout</span>
