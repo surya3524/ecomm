@@ -20,13 +20,7 @@ import { CartService } from '../../../../services/cart.service';
         <app-primary-button class="mt-1" label = "Add to Cart" (btnClicked) = "cartService.addToCart(product())" ></app-primary-button>
       </div>
 
-      <span
-        class="absolute top-2 right-3 text-sm font-bold"
-        [class]="product().stock ? 'text-green-500' : 'text-red-500'"
-      >
-        @if (product().stock) {
-        {{ product().stock }} left } @else { Out of stock }
-      </span>
+      <!-- Stock status removed as requested -->
     </div>
   `,
   styles: ``,
