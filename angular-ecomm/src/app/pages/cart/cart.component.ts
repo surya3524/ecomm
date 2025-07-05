@@ -29,9 +29,14 @@ import { RemoveButtonComponent } from "../../remove-button/remove-button.compone
         </div>
       }
 
-      <div class="bg-white text-xl shadow-orange-50 p-3 flex justify-between items-center">
-        <span>Total Cost:</span>
-        <span>{{ '$' + totalPrice() }}</span>
+      <div class="bg-white shadow-lg border rounded-xl p-6 flex flex-col gap-4 mt-4">
+        <div class="flex justify-between items-center">
+          <span class="text-xl">Total Cost:</span>
+          <span class="text-xl font-semibold">{{ '$' + totalPrice() }}</span>
+        </div>
+        <button class="bg-blue-500 text-white px-4 py-2 rounded-xl shadow-md hover:opacity-80 w-full mt-2">
+          <span class="text-md">Proceed to Checkout</span>
+        </button>
       </div>
     </div>
   `,
