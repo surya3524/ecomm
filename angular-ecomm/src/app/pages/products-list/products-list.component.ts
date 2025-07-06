@@ -13,10 +13,12 @@ export type Product = {
   selector: 'app-products-list',
   imports: [ProductCardComponent],
   template: `
-    <div class="p-3 grid grid-cols-2 gap-4 full-w">
-      @for (product of products(); track product.id) {
-        <app-product-card [product]="product"/>
-      }
+    <div class="flex justify-center w-full">
+      <div class="w-4/5 p-3 grid grid-cols-2 gap-4">
+        @for (product of products(); track product.id) {
+          <app-product-card [product]="product"/>
+        }
+      </div>
     </div>
   `,
   styles: ``
