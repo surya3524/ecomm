@@ -14,6 +14,7 @@ import { Component, input, output } from '@angular/core';
 export class RemoveButtonComponent {
 
   label = input('');
+  
 
   btnClicked = output<void>();
 }
