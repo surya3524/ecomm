@@ -4,7 +4,7 @@ import { Component, input, output } from '@angular/core';
   selector: 'app-remove-button',
   imports: [],
   template: `
-    <button class="bg-red-400 text-white px-4 py-2 rounded-xl shadow-md
+    <button class="bg-red-300 text-white px-4 py-2 rounded-xl shadow-md
     hover:opacity-50" (click) = "btnClicked.emit()">
       {{label()}} 
     </button>
@@ -14,7 +14,6 @@ import { Component, input, output } from '@angular/core';
 export class RemoveButtonComponent {
 
   label = input('');
-  
 
   btnClicked = output<void>();
 }
